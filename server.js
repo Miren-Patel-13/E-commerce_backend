@@ -1,9 +1,14 @@
-const express = require('express')
-const app = express()
-const Port = 5000
+import express from 'express';
+import { connection } from './Postgres/postgres.js';
 
-app.use(express.json())
+const app = express();
+
+const Port = 5000;
+
+app.use(express.json());
+
+connection();
 
 app.listen(Port, () => {
-    console.log("Server Started...")
-})
+    console.log("Server Started...");
+});
