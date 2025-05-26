@@ -7,7 +7,7 @@ const Port = 5000;
 
 app.use(express.json());
 
-connection();
+await connection();
 
 app.listen(Port, () => {
     console.log("Server Started...");
